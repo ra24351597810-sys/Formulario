@@ -1,0 +1,194 @@
+.Principal {
+  width: 100%;
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 30px 20px 40px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #111;
+  box-sizing: border-box;
+
+  h1 {
+    text-align: center;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 38px;
+    font-weight: 400;
+    margin: 0 0 28px;
+  }
+
+  .formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .campo {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    label {
+      font-size: 12px;
+      font-weight: 400;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      height: 30px;
+      padding: 5px 8px;
+      border: 1px solid #999;
+      border-radius: 0;
+      background: #fff;
+      color: #111;
+      font-size: 13px;
+      outline: none;
+      box-sizing: border-box;
+
+      &:focus {
+        border-color: #111;
+      }
+    }
+
+    textarea {
+      height: 60px;
+      resize: vertical;
+    }
+  }
+
+  .data-hora {
+    display: grid;
+    grid-template-columns: 55px 1fr 55px 55px;
+    gap: 16px;
+
+    .campo {
+      min-width: 0;
+    }
+  }
+
+  .preferencia {
+    margin-top: 2px;
+
+    > label {
+      display: block;
+      font-size: 12px;
+      margin-bottom: 9px;
+    }
+
+    .opcao {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 8px;
+
+      input[type="radio"] {
+        appearance: none;
+        width: 13px;
+        height: 13px;
+        border: 1px solid #888;
+        border-radius: 50%;
+        margin: 0;
+        cursor: pointer;
+
+        &:checked {
+          border: 4px solid #111;
+        }
+      }
+
+      span {
+        font-size: 13px;
+      }
+    }
+  }
+
+  .newsletter {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 1px;
+
+    input[type="checkbox"] {
+      appearance: none;
+      width: 12px;
+      height: 12px;
+      border: 1px solid #888;
+      border-radius: 0;
+      margin: 0;
+      cursor: pointer;
+
+      &:checked {
+        background: #111;
+        border-color: #111;
+        position: relative;
+
+        &::after {
+          content: "✓";
+          display: block;
+          color: white;
+          font-size: 9px;
+          line-height: 10px;
+          text-align: center;
+        }
+      }
+    }
+
+    label {
+      font-size: 12px;
+      cursor: pointer;
+    }
+  }
+
+  .botao {
+    width: 100%;
+    height: 29px;
+    margin-top: 2px;
+    border: none;
+    border-radius: 0;
+    background: #000;
+    color: #fff;
+    font-size: 12px;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.65;
+    }
+  }
+
+  .voltar {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    color: #111;
+    font-size: 13px;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .Principal {
+    padding: 25px 15px 35px;
+
+    h1 {
+      font-size: 32px;
+    }
+
+    .data-hora {
+      grid-template-columns: 1fr 1fr;
+
+      .campo {
+        &:last-child {
+          grid-column: span 2;
+        }
+      }
+    }
+  }
+}
