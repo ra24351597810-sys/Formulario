@@ -1,0 +1,113 @@
+.Contador {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 20px;
+  background: #f5f5f3;
+  color: #171717;
+  font-family: Arial, Helvetica, sans-serif;
+
+  .sectionzita {
+    width: min(100%, 360px);
+    padding: 34px 30px 30px;
+    border: 1px solid #d7d7d3;
+    background: #fff;
+    text-align: center;
+  }
+
+  .sectionzita p {
+    margin: 0 0 24px;
+    color: #626262;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+
+  .Containerzin {
+    display: grid;
+    grid-template-columns: 52px 1fr 52px;
+    align-items: center;
+    gap: 18px;
+  }
+
+  .Containerzin h2 {
+    margin: 0;
+    min-width: 0;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 58px;
+    line-height: 1;
+    font-weight: 400;
+    letter-spacing: -2px;
+  }
+
+  .Containerzin button {
+    width: 52px;
+    height: 52px;
+    display: grid;
+    place-items: center;
+    padding: 0;
+    border: 1px solid #bdbdb9;
+    border-radius: 2px;
+    background: #fff;
+    color: #171717;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 1;
+    cursor: pointer;
+    transition: background 0.15s ease, border-color 0.15s ease, transform 0.1s ease;
+
+    &:hover {
+      background: #f1f1ef;
+      border-color: #171717;
+    }
+
+    &:active {
+      transform: translateY(1px);
+    }
+  }
+
+  a {
+    margin-top: 18px;
+    color: #5c5c5c;
+    font-size: 12px;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: color 0.15s ease, border-color 0.15s ease;
+
+    &:hover {
+      color: #171717;
+      border-color: #171717;
+    }
+
+    + a {
+      margin-top: 9px;
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  .Contador {
+    padding: 20px 14px;
+
+    .sectionzita {
+      padding: 28px 20px 24px;
+    }
+
+    .Containerzin {
+      grid-template-columns: 46px 1fr 46px;
+      gap: 12px;
+    }
+
+    .Containerzin button {
+      width: 46px;
+      height: 46px;
+    }
+
+    .Containerzin h2 {
+      font-size: 50px;
+    }
+  }
+}

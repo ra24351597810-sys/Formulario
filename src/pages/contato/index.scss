@@ -1,65 +1,86 @@
 .Principal {
-  width: 100%;
-  max-width: 650px;
+  min-height: 100vh;
+  width: min(100%, 760px);
   margin: 0 auto;
-  padding: 30px 20px 40px;
+  padding: 56px 24px 48px;
+  color: #171717;
   font-family: Arial, Helvetica, sans-serif;
-  color: #111;
-  box-sizing: border-box;
 
   h1 {
-    text-align: center;
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 38px;
+    margin: 0 0 34px;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: clamp(34px, 5vw, 52px);
     font-weight: 400;
-    margin: 0 0 28px;
+    line-height: 1;
+    letter-spacing: -1.5px;
+    text-align: center;
   }
 
   .formulario {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 22px;
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 30px;
+    border: 1px solid #dedede;
+    background: #fff;
   }
 
   .campo {
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 8px;
 
     label {
       font-size: 12px;
-      font-weight: 400;
+      line-height: 1;
+      color: #5f5f5f;
+      letter-spacing: 0.03em;
     }
 
     input,
     select,
     textarea {
       width: 100%;
-      height: 30px;
-      padding: 5px 8px;
-      border: 1px solid #999;
-      border-radius: 0;
+      border: 1px solid #c9c9c9;
+      border-radius: 2px;
       background: #fff;
-      color: #111;
-      font-size: 13px;
+      color: #171717;
+      font: inherit;
+      font-size: 14px;
       outline: none;
+      transition: border-color 0.15s ease, background 0.15s ease;
       box-sizing: border-box;
 
+      &:hover {
+        border-color: #999;
+      }
+
       &:focus {
-        border-color: #111;
+        border-color: #171717;
+        background: #fafafa;
       }
     }
 
+    input,
+    select {
+      height: 44px;
+      padding: 0 12px;
+    }
+
     textarea {
-      height: 60px;
+      min-height: 96px;
+      padding: 11px 12px;
       resize: vertical;
     }
   }
 
   .data-hora {
     display: grid;
-    grid-template-columns: 55px 1fr 55px 55px;
-    gap: 16px;
+    grid-template-columns: 86px minmax(150px, 1fr) 92px 120px;
+    gap: 14px;
+    margin-top: -4px;
 
     .campo {
       min-width: 0;
@@ -67,128 +88,166 @@
   }
 
   .preferencia {
-    margin-top: 2px;
+    padding-top: 2px;
 
     > label {
       display: block;
+      margin-bottom: 11px;
       font-size: 12px;
-      margin-bottom: 9px;
+      color: #5f5f5f;
+      letter-spacing: 0.03em;
     }
 
     .opcao {
       display: flex;
       align-items: center;
-      gap: 8px;
-      margin-bottom: 8px;
+      gap: 9px;
+      margin-bottom: 9px;
 
-      input[type="radio"] {
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      input[type='radio'] {
         appearance: none;
-        width: 13px;
-        height: 13px;
-        border: 1px solid #888;
-        border-radius: 50%;
+        width: 15px;
+        height: 15px;
         margin: 0;
+        border: 1px solid #9c9c9c;
+        border-radius: 50%;
         cursor: pointer;
+        position: relative;
 
         &:checked {
-          border: 4px solid #111;
+          border-color: #171717;
+
+          &::after {
+            content: '';
+            position: absolute;
+            inset: 3px;
+            border-radius: 50%;
+            background: #171717;
+          }
         }
       }
 
       span {
         font-size: 13px;
+        color: #292929;
       }
     }
   }
 
   .newsletter {
     display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-top: 1px;
+    align-items: flex-start;
+    gap: 9px;
 
-    input[type="checkbox"] {
+    input[type='checkbox'] {
       appearance: none;
-      width: 12px;
-      height: 12px;
-      border: 1px solid #888;
-      border-radius: 0;
+      flex: 0 0 auto;
+      width: 15px;
+      height: 15px;
       margin: 0;
+      border: 1px solid #9c9c9c;
+      border-radius: 2px;
       cursor: pointer;
+      position: relative;
 
       &:checked {
-        background: #111;
-        border-color: #111;
-        position: relative;
+        border-color: #171717;
+        background: #171717;
 
         &::after {
-          content: "✓";
-          display: block;
-          color: white;
-          font-size: 9px;
-          line-height: 10px;
-          text-align: center;
+          content: '✓';
+          position: absolute;
+          left: 2px;
+          top: -1px;
+          color: #fff;
+          font-size: 11px;
+          line-height: 15px;
         }
       }
     }
 
     label {
       font-size: 12px;
+      line-height: 1.4;
+      color: #575757;
       cursor: pointer;
     }
   }
 
   .botao {
     width: 100%;
-    height: 29px;
+    height: 46px;
     margin-top: 2px;
-    border: none;
-    border-radius: 0;
-    background: #000;
+    border: 1px solid #171717;
+    border-radius: 2px;
+    background: #171717;
     color: #fff;
-    font-size: 12px;
+    font: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
     cursor: pointer;
-    transition: opacity 0.2s ease;
+    transition: background 0.15s ease, transform 0.1s ease;
 
     &:hover {
-      opacity: 0.8;
+      background: #303030;
     }
 
     &:active {
-      opacity: 0.65;
+      transform: translateY(1px);
     }
   }
 
   .voltar {
-    display: block;
-    margin-top: 20px;
-    text-align: center;
-    color: #111;
-    font-size: 13px;
+    display: inline-block;
+    margin-top: 18px;
+    margin-right: 18px;
+    color: #5a5a5a;
+    font-size: 12px;
     text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: color 0.15s ease, border-color 0.15s ease;
 
     &:hover {
-      text-decoration: underline;
+      color: #171717;
+      border-color: #171717;
     }
   }
-}
 
-@media (max-width: 600px) {
-  .Principal {
-    padding: 25px 15px 35px;
+  @media (max-width: 640px) {
+    padding: 38px 16px;
 
     h1 {
-      font-size: 32px;
+      margin-bottom: 26px;
+      font-size: 38px;
+    }
+
+    .formulario {
+      padding: 22px;
     }
 
     .data-hora {
       grid-template-columns: 1fr 1fr;
 
-      .campo {
-        &:last-child {
-          grid-column: span 2;
-        }
+      .campo:last-child {
+        grid-column: 1 / -1;
       }
+    }
+  }
+
+  @media (max-width: 420px) {
+    .formulario {
+      padding: 18px;
+    }
+
+    .voltar {
+      display: block;
+      width: fit-content;
+      margin-right: 0;
     }
   }
 }

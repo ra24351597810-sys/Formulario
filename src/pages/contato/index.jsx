@@ -110,6 +110,7 @@ export default function Contato() {
       </form>
 
       <Link className="voltar" to="/">Voltar para o início</Link>
+      <Link className="voltar" to="/contador">Contador</Link>
 
     </div>
   );

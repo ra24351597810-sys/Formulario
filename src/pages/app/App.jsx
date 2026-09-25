@@ -36,6 +36,7 @@ export default function App() {
 
         </div>
         <Link to='/contatos'>Contato</Link>
+        <Link to='/contador'>Contador</Link>
     </div>
   );
 }
