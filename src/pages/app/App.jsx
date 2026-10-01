@@ -35,8 +35,10 @@ export default function App() {
           </div>
 
         </div>
-        <Link to='/contatos'>Contato</Link>
+        <Link to='/contatos'>Contatos</Link>
         <Link to='/contador'>Contador</Link>
+        <Link to='/titulo'>Titulo</Link>
+        <Link to='/titulo2'>Titulo com botão</Link>
     </div>
   );
 }
