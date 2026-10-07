@@ -14,6 +14,21 @@ export default function Calculadora() {
         setresp(resultado);
     }
 
+    function dividir() {
+        const resultado = Number(valor1) / Number(valor2);
+        setresp(resultado);
+    }
+
+    function multiplicar() {
+        const resultado = Number(valor1) * Number(valor2);
+        setresp(resultado);
+    }
+
+    function subtrair() {
+        const resultado = Number(valor1) - Number(valor2);
+        setresp(resultado);
+    }
+
     function mudarTitulo(e) {
         let mudado = e.target.checked;
         setresptitu(mudado);
@@ -32,6 +47,9 @@ return(
                 <div>resultado: {resp}</div>
 
             <button onClick={somar}>Somar</button>
+            <button onClick={subtrair}>Subtrair</button>
+            <button onClick={multiplicar}>Multiplicar</button>
+            <button onClick={dividir}>Dividir</button>
         </div>
 
         <div className='RDJM'>
