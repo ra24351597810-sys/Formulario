@@ -1,0 +1,24 @@
+.POP {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(127, 255, 212, 0.747);
+    width: 100%;
+    min-height: 60px;
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+
+.Botos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.Botos button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
