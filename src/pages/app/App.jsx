@@ -40,6 +40,7 @@ export default function App() {
         <Link to='/titulo'>Titulo</Link>
         <Link to='/titulo2'>Titulo com botão</Link>
         <Link to='/calculadora'>Calculadora</Link>
+        <Link to='/cep'>CEP</Link>
     </div>
   );
 }

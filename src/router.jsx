@@ -1,15 +1,13 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import App from './pages/app/App.jsx';
-import './pages/app/App.scss';
 import Contato from './pages/contato/index.jsx';
-import './pages/contato/index.scss';
 import Contator from './pages/contadorNovo/index.jsx';
-import './pages/contadorNovo/index.scss';
 import Mudartitle from './pages/change-titulo/index.jsx';
 import Mudartitulo2 from './pages/mudar-titulo-botao/index.jsx';
 import Calculadora from './pages/calculadora/index.jsx';
 import PagGina from './pages/po/index.jsx';
 import TESTARCOMPO from './pages/testcompo/index.jsx';
+import CEPZIO from './pages/cep/index.jsx';
 
 export default function Router(){
     return(
@@ -23,6 +21,7 @@ export default function Router(){
             <Route path="/calculadora" element={<Calculadora />} />
             <Route path="/Test" element={<PagGina />} /> 
             <Route path="/compo" element={<TESTARCOMPO />} />
+            <Route path="/cep" element={<CEPZIO />} />
         </Routes>
         </BrowserRouter>
       )

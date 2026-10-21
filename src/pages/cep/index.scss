@@ -1,0 +1,36 @@
+body{
+    background-color: black;
+
+    .principal{
+
+        .separ{
+            background-color: rgb(255, 255, 255); 
+            width: 800px !important;
+            max-width: 95vw;
+            height: 500px !important;
+            max-height: 80vw;
+            display: flex; 
+            flex-direction: column;
+            gap: 50px;
+            padding: 20px;
+            box-sizing: border-box;
+            align-items: center;
+            justify-content: center;
+
+            .input{
+                width: 200px;
+                height: auto;
+                text-align: center;
+                background-color: grey;
+                border-radius: 20px;
+                text-align: center;
+            }
+
+            button{
+                width: 120px;
+                height: 50px;
+                border-radius: 10px;
+            }
+        }
+    }
+}
