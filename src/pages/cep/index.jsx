@@ -1,7 +1,7 @@
 import { use, useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-import './index.scss';
+
 
 export default function CEPZIO(){
     const [cep, setcep] = useState( );

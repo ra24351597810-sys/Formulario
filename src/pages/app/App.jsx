@@ -1,4 +1,4 @@
-import './App.scss';
+
 import { Link } from 'react-router-dom';
 
 
@@ -41,6 +41,7 @@ export default function App() {
         <Link to='/titulo2'>Titulo com botão</Link>
         <Link to='/calculadora'>Calculadora</Link>
         <Link to='/cep'>CEP</Link>
+        <Link to='/calc'>Calculadora nova de Ingresso</Link>
     </div>
   );
 }

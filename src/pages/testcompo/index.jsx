@@ -1,7 +1,6 @@
 import { useState } from "react";
 import Menu from '../../components/menu/index.jsx';
 
-import './index.scss';
 
 export default function TESTARCOMPO(){
     const [Numer1, setNumer1] = useState('');

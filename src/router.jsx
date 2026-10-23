@@ -8,6 +8,7 @@ import Calculadora from './pages/calculadora/index.jsx';
 import PagGina from './pages/po/index.jsx';
 import TESTARCOMPO from './pages/testcompo/index.jsx';
 import CEPZIO from './pages/cep/index.jsx';
+import Calcullatoos from './pages/calculattus/index.jsx'
 
 export default function Router(){
     return(
@@ -22,6 +23,7 @@ export default function Router(){
             <Route path="/Test" element={<PagGina />} /> 
             <Route path="/compo" element={<TESTARCOMPO />} />
             <Route path="/cep" element={<CEPZIO />} />
+            <Route path="/calc" element={<Calcullatoos />} />
         </Routes>
         </BrowserRouter>
       )

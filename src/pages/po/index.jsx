@@ -1,5 +1,5 @@
 import { useState } from "react";
-import './index.scss';
+
 
 export default function PagGina(){
     const [Numer1, setNumer1] = useState('');
